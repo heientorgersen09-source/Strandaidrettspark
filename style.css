@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    color: #0A0A0A;
+}
+
+.site-header {
+    background-color: #00bfff;
+    /* Lyseblå farge som*/
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Lett skygge */
+
+    /* Sticky effekt så man kan se toppen av siden lenger ned */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header h1 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* Navigasjon */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+    color: #00c3ff;
+    /* Lys blå når aktiv eller hover */
+}
+
+
+/*hero seksjon */
+.hero {
+    background-image: url("bilder/stranda.png");
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+    padding: 30px 45px;
+    border-radius: 10px;
+    text-align: center;
+    /* Legger til en lysere bakgrunnsfarge for hero seksjonen */
+}
+
+.hero-overlay h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 20px;
+    margin: 0;
+}
+
+
+/* det skal være padding for front pagen så teksten og bildene ser bedre ut */
+main {
+    padding: 40px 80px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    font-style: italic;
+}
+
+.image-title {
+    font-size: 24px;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/*info bokser class så jeg slipper å lage en boks hver gang*/
+.info-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.box {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.box h3 {
+    text-align: center;
+}
+
+
+
+.image-section img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 60px 0;
+}
+
+
+/* Call to action seksjon */
+.cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Call to action bilde styling*/
+.cta-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* call to action tekst styling*/
+.cta-text h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/*call to action knapp styling*/
+.cta-text button {
+    background-color: #0c0c0c;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* Styler footer for hver eneste side */
+.footer {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Footer overskrift styling */
+.footer h2 {
+    margin-bottom: 15px;
+}
+
+/* Footer lenker styling */
+.footer a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer logo styling */
+.footer-logos img {
+    width: 120px;
+    margin-left: 15px;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobiltilpasning */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logos {
+        justify-content: center;
+    }
+
+    .footer-logos img {
+        margin: 10px;
+    }
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    main {
+        padding: 30px;
+    }
+
+    .info-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .hero-overlay h2 {
+        font-size: 32px;
+    }
+}
+
+/* Global styling for alle sider, så det blir mer enhetlig og pent */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/* Header */
+.site-header {
+    padding: 20px;
+}
+
+.site-header h1 {
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Navigasjon */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    background: #262626;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+
+.main-nav a.active {
+    text-decoration: underline;
+}
+
+/* Side tittel */
+.side-tittel {
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Grid */
+.ovelse-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 0 60px;
+}
+
+/* Kort */
+.ovelse-kort h2 {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ovelse-kort img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* gjør at bildene fyller boksen pent */
+    margin-bottom: 15px;
+}
+
+/* Knapp styling */
+button {
+    padding: 10px 20px;
+    border: 1px solid #555;
+    background: #e6e6e6;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #dcdcdc;
+}
+
+/* boks for artikkel siden min */
+.artikkelboks {
+    border: 2px solid #ccc;
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    background: white;
+    margin: 30px;
+    border-radius: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* lenkerboks styling */
+.lenkerboks {
+    border: 2px solid #ccc;
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    background: white;
+    margin: 30px;
+    border-radius: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Boks for treningsvideoene */
+.treningboks {
+    border: 2px solid #ccc;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background: white;
+    margin: 30px;
+    border-radius: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Boks for om stranda pagen min det står info her */
+.omstrandaboks {
+    border: 2px solid #ccc;
+    width: 600px;
+    height: 310px;
+    padding: 20px;
+    background: white;
+    margin: 30px;
+    border-radius: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
